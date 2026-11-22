@@ -463,8 +463,14 @@ pre.term .p{color:#7fd6c3} pre.term .d{color:#8fa1ba} pre.term .y{color:#fff;fon
   .route .nd{opacity:1!important;transform:none!important}
   .print-all .page[hidden]{display:block!important}
   .print-all .page+.page{break-before:page}
-  .tpanel[hidden],.kpanel[hidden]{display:block!important;margin-top:14px}
-  .box,.dark,.parent,.tip,.tk,.cond,.road li,.fact,.whitebox,.res,.faq details,.tsum,.kgrid,.gloss>div,tr,.yr,.nd{break-inside:avoid}
+  .tpanel[hidden],.kpanel[hidden]{display:block!important;margin-top:18px}
+  .tpanel,.kpanel{animation:none!important;opacity:1!important;transform:none!important}
+  #kSeg,#tSeg{display:none!important}
+  .tpanel::before{content:attr(data-label);display:block;font-size:17px;font-weight:800;margin:0 0 8px}
+  .kgrid{grid-template-columns:1fr 1fr!important}
+  .kgrid .hero{grid-column:1/-1;padding:16px 20px}
+  .kgrid .hero b{font-size:20px;margin:2px 0 6px}
+  .box,.dark,.parent,.tip,.tk,.cond,.road li,.fact,.whitebox,.res,.faq details,.kgrid .hero,.kgrid .whitebox,.tsum .hero,.gloss>div,tr,.yr,.nd{break-inside:avoid}
   h2,h3,.h3{break-after:avoid}
   .print-head{display:flex!important;justify-content:space-between;font-size:11px;color:#64748b;border-bottom:1px solid #e2e7ee;padding-bottom:6px;margin-bottom:14px}
   .ph{margin-bottom:18px}
@@ -1222,7 +1228,7 @@ pre.term .p{color:#7fd6c3} pre.term .d{color:#8fa1ba} pre.term .y{color:#fff;fon
         <div class="seg" role="group" aria-label="전형 선택" id="tSeg"><button data-v="g" aria-pressed="true">일반 48명</button><button data-v="m" aria-pressed="false">마이스터인재 10명</button><button data-v="s" aria-pressed="false">사회통합 6명</button></div>
       </section>
 
-      <div class="tpanel rv" data-t="g">
+      <div class="tpanel rv" data-t="g" data-label="일반전형 (48명)">
         <div class="tsum">
           <div class="hero"><small>가장 큰 칸</small><b>교과 200점</b><span>전체 400점의 50%</span>
             <div class="minibar"><i style="flex:200;background:var(--p1a)"></i><i style="flex:40;background:var(--p1c)"></i><i style="flex:120;background:#5d7799"></i><i style="flex:40;background:var(--p2c)"></i></div></div>
@@ -1236,7 +1242,7 @@ pre.term .p{color:#7fd6c3} pre.term .d{color:#8fa1ba} pre.term .y{color:#fff;fon
           <li>2단계는 면접 120점 + 적성 40점입니다.</li>
           <li>출결·봉사·가산점 40점은 1단계 동점권을 가르는 요소입니다.</li></ul></div>
       </div>
-      <div class="tpanel" data-t="m" hidden>
+      <div class="tpanel" data-t="m" data-label="마이스터인재전형 (10명)" hidden>
         <div class="tsum">
           <div class="hero"><small>가장 큰 칸</small><b>코딩테스트 80점</b><span>2단계 240점 중 3분의 1</span>
             <div class="minibar"><i style="flex:120;background:var(--p1a)"></i><i style="flex:40;background:var(--p1c)"></i><i style="flex:120;background:#5d7799"></i><i style="flex:80;background:#7fd6c3"></i><i style="flex:40;background:var(--p2c)"></i></div></div>
@@ -1251,7 +1257,7 @@ pre.term .p{color:#7fd6c3} pre.term .d{color:#8fa1ba} pre.term .y{color:#fff;fon
           <li>탈락해도 일반전형으로 전환되므로 내신이 계속 중요합니다.</li></ul></div>
         <div class="box warm" style="margin-top:12px"><div class="bt">불합격 기준 주의</div><p>코딩테스트 32점(40%) 또는 총점 300점(75%) 미달 시 입학전형위원회 협의를 거쳐 불합격 처리될 수 있습니다.</p></div>
       </div>
-      <div class="tpanel" data-t="s" hidden>
+      <div class="tpanel" data-t="s" data-label="사회통합전형 (6명)" hidden>
         <div class="tsum">
           <div class="hero"><small>가장 큰 칸</small><b>심층면접 200점</b><span>전체 400점의 50%</span>
             <div class="minibar"><i style="flex:120;background:var(--p1a)"></i><i style="flex:40;background:var(--p1c)"></i><i style="flex:200;background:#5d7799"></i><i style="flex:40;background:var(--p2c)"></i></div></div>
