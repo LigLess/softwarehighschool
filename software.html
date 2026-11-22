@@ -467,9 +467,16 @@ pre.term .p{color:#7fd6c3} pre.term .d{color:#8fa1ba} pre.term .y{color:#fff;fon
   .tpanel,.kpanel{animation:none!important;opacity:1!important;transform:none!important}
   #kSeg,#tSeg{display:none!important}
   .tpanel::before{content:attr(data-label);display:block;font-size:17px;font-weight:800;margin:0 0 8px}
-  .kgrid{grid-template-columns:1fr 1fr!important}
-  .kgrid .hero{grid-column:1/-1;padding:16px 20px}
-  .kgrid .hero b{font-size:20px;margin:2px 0 6px}
+  .kwrap{display:grid!important;grid-template-columns:repeat(3,1fr);gap:10px;break-inside:avoid}
+  .kwrap .kpanel{margin-top:0!important}
+  .kgrid{grid-template-columns:1fr!important;gap:8px!important}
+  .kgrid .hero{grid-column:auto;padding:14px 16px;border-radius:14px}
+  .kgrid .hero b{font-size:17px;margin:2px 0 4px}
+  .kgrid .hero p{font-size:12.5px;line-height:1.5}
+  .kgrid .whitebox{padding:12px 14px;border-radius:14px}
+  .kgrid .whitebox p{font-size:13px}
+  .kgrid .whitebox li{font-size:12.5px;line-height:1.5}
+  .kgrid ul.dots{gap:4px}
   .box,.dark,.parent,.tip,.tk,.cond,.road li,.fact,.whitebox,.res,.faq details,.kgrid .hero,.kgrid .whitebox,.tsum .hero,.gloss>div,tr,.yr,.nd{break-inside:avoid}
   h2,h3,.h3{break-after:avoid}
   .print-head{display:flex!important;justify-content:space-between;font-size:11px;color:#64748b;border-bottom:1px solid #e2e7ee;padding-bottom:6px;margin-bottom:14px}
@@ -1552,7 +1559,7 @@ pre.term .p{color:#7fd6c3} pre.term .d{color:#8fa1ba} pre.term .y{color:#fff;fon
       <section class="panel rv">
         <h3 class="h3">2·3학년 트랙별 교육과정</h3>
         <div class="seg" role="group" aria-label="트랙 선택" id="kSeg"><button data-v="a" aria-pressed="true">Track A 소프트웨어 엔지니어</button><button data-v="b" aria-pressed="false">Track B AI 에이전트 개발자</button><button data-v="c" aria-pressed="false">Track C 피지컬 AI 엔지니어</button></div>
-        <div style="margin-top:16px">
+        <div class="kwrap" style="margin-top:16px">
           <div class="kpanel" data-k="a">
             <div class="kgrid">
               <div class="hero"><small>Track A</small><b>소프트웨어 엔지니어</b><p>엔터프라이즈 소프트웨어와 웹·모바일 애플리케이션 개발에 필요한 고급 기술을 갖춘 엔지니어</p></div>
